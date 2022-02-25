@@ -57,7 +57,7 @@ class Category(models.Model):
 
 #image
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'uploads/')
+    image = models.ImageField(upload_to = 'uploads/categories')
     image_name = models.CharField(max_length = 60)
     image_description = models.TextField()
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -96,7 +96,7 @@ class Image(models.Model):
         return images_location
 
     def __str__(self):
-        return self.name
+        return self.image_name
 
     class Meta:
         ordering = ['image_name']    
