@@ -13,6 +13,20 @@ def gallery(request):
 
     return render(request, 'index.html', {'title':title, 'images':images, 'locations':locations})
 
+#single image
+def single(request,category_name,image_id):
+    # images = Image.get_image_by_id(image_id)
+    title = 'Image'
+    locations = Location.objects.all()
+    # category = Category.get_category_id(id = image_category)
+    image_category = Image.objects.filter(image_category__name = category_name)
+    try:
+        image = Image.objects.get(id = image_id)
+    except DoesNotExist:
+        raise Http404()
+    return render(request,"single.html",{'title':title,"image":image, "locations":locations, "image_category":image_category})
+
+
 #search for image functionality
 def search_image(request):
     title = 'Search'
