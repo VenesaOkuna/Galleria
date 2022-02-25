@@ -1,7 +1,7 @@
 from unicodedata import category
 from django.db import models
 from httpx import delete
-from pyuploadcare.dj.models import ImageField
+# from pyuploadcare.dj.models import ImageField
 
 # Create your models here.
 
@@ -57,7 +57,7 @@ class Category(models.Model):
 
 #image
 class Image(models.Model):
-    image = ImageField( blank = False, manual_crop= 60)
+    image = models.ImageField(upload_to = 'uploads/')
     image_name = models.CharField(max_length = 60)
     image_description = models.TextField()
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
