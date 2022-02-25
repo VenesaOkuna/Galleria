@@ -4,5 +4,6 @@ from . import views
 urlpatterns = [
     path('', views.gallery, name = 'gallery'),
     path('search/', views.search_image, name = 'search_image'),
-    path('^image/(?P<category_name>\w+)/(?P<image_id>\d+)',views.single,name = 'single')
+    path('^image/(?P<category_name>\w+)/(?P<image_id>\d+)',views.single,name = 'single'),
+    path('^location/(?P<image_location>\d+)', views.location_filter, name='location_filter')
 ]
