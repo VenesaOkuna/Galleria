@@ -36,11 +36,11 @@
                  <div class="portfolio-wrap ">
                      <div class="portfolio-wrap hovereffect">
 
-                         <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
-                             <img src="{{image.image.url}}" href="" class="image" alt="Image" >
-                             <div class="overlay">
-                                 <h4>{{image.image_name}}</h4>
-                             </div>
+                        <img src="{{image.image.url}}" href="#" class="image" data-toggle="modal" data-target="#{{image.id}}" alt="Image" >
+                            <a class='portfolio-wrap hovereffect' style='color:grey; text-decoration:none; ' data-toggle="modal" data-target="#myModal{{ forloop.counter }}">{{image.image_name}}   <span style='color:pink; text-decoration:none; '>   details</span> </a>
+                            
+                                
+                             
 
                          </a>
 
@@ -65,49 +65,50 @@
     {% endfor %}
 
     <!-- looping through image details modal class -->
+ 
+    <!-- Modal -->
     {% for image in images %}
-        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
+    <div class="modal fade" id="myModal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" data-target="#{{image.id}}"  aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"> Image Details </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
 
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteModalLabel">Image Details</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-9 col-lg-9">
+                        <a href="/"><img id="{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
+
                     </div>
 
-                    <div class="modal-body">
-                        <div class="row">
-
-                            <div class="col-md-9 col-lg-9">
-                                <a href="{% url 'single' category_name=image.image_category.category_name image_id=image.id %}"><img id="img{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
-                            </div>
-
-                            <div class="col-md-3">
-                                <h4>Location</h4>
-                                <p>{{image.image_location.location_name}}</p>
-                                <h4>Category</h4>
-                                <p>{{image.image_category.category_name}}</p>
-                            </div>
-
-                            <div>
-                                <h2 class="desc">{{image.image_name}}</h2>
-                                <p class="desc">{{image.image_description}}</p>
-                            </div>
-                            
-                        </div>
+                    <div class="col-md-3">
+                        <h4 class = "desc">Location</h4>
+                        <p>{{image.image_location.location_name}}</p>
+                        <h4 class = "desc">Category</h4>
+                        <p>{{image.image_category.category_name}}</p>
                     </div>
 
-                    <div class="modal-footer">
-                        <!-- <input class="form-control" type="text" value="{{image.image_link}}" id="link"> -->
-                        <button type="button" class="btn btn-secondary" onclick="copy('img{{image.id}}')">Copy Link</button>
-                       <!-- <a onclick="myFunction()"><button type="button"  class="btn btn-primary">Copy Link</button></a> -->
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <div>
+                        <h2 class="desc">{{image.image_name}}</h2>
+                        <p class="desc">{{image.image_description}}</p>
                     </div>
+                    
                 </div>
             </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="copy('img{{image.id}}')">Copy Link</button>
+                <!-- <input class="form-control" type="text" value="{{image.image_link}}" id="link">
+               <a onclick="myFunction()"><button type="button"  class="btn btn-primary">Copy Link</button></a> -->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
         </div>
+        </div>
+    </div>
     {% endfor %}
 </div>
 
