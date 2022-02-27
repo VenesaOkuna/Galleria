@@ -8,6 +8,6 @@ urlpatterns = [
     path('search/', views.search_image, name = 'search_image'),
     path('image/<image_id>/', views.Picture.as_view(),name='image'),
     path('image/<category_name>/<image_id>/)',views.single,name = 'single'),
-    path('location/<image_location>/)', views.location_filter, name='location_filter')
+    path('location/<image_location>/', views.location_filter, name='location_filter')
 ]
 

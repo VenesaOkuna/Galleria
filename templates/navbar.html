@@ -83,10 +83,10 @@
     <!-- Location side navebar -->
     <div id="sideNav" class="nav-side">
         <a href="javascript:void(0)" class="close-nav">&times;</a>
-        <a href="#" data-toggle="modal" data-target="#about" style="font-family: 'Nunito', sans-serif;">About</a>
+        <a href="#" data-toggle="modal" data-target="#about" style="font-family: 'Nunito', sans-serif;">Image Locations</a>
         <a>Locations:</a>
         {% for location in locations %}
-        <a href="/location/{{location.location_name}}" style="font-family: 'Nunito', sans-serif;">{{location.location_name}}</a>
+        <a href="/location/{{location.id}}" style="font-family: 'Nunito', sans-serif;">{{location.location_name}}</a>
         {% empty %}
         <a href="#" style="font-family: 'Nunito', sans-serif;">There are no locations</a>
         {% endfor %}
