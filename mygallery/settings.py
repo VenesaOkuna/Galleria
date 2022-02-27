@@ -32,19 +32,20 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-
+    'pyuploadcare.dj',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'gallery',
+    'gallery.apps.GalleryConfig',
     'bootstrap4'
     
 ]
 
 MIDDLEWARE = [
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -66,11 +67,21 @@ TEMPLATES = [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages'
+                
             ],
         },
     },
 ]
+
+#uploadcare config
+
+UPLOADCARE = {
+    'pub_key': '788d6963ce75b88e1168',
+    'secret': 'd9c8d9186f97940a0c0e',
+}
+
+
 
 WSGI_APPLICATION = 'mygallery.wsgi.application'
 
@@ -117,16 +128,23 @@ USE_I18N = True
 USE_TZ = True
 
 
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR /'media'
+
+
+# MEDIA_ROOT = BASE_DIR / 'media/images'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

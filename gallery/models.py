@@ -1,5 +1,6 @@
 from unicodedata import category
 from django.db import models
+from django.db.models import Model
 from httpx import delete
 # from pyuploadcare.dj.models import ImageField
 
@@ -57,7 +58,7 @@ class Category(models.Model):
 
 #image
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'uploads/categories')
+    image = models.ImageField(null=False,blank=False,)
     image_name = models.CharField(max_length = 60)
     image_description = models.TextField()
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
@@ -99,7 +100,7 @@ class Image(models.Model):
         return self.image_name
 
     class Meta:
-        ordering = ['image_name']    
+        ordering = ['image']    
 
 
 

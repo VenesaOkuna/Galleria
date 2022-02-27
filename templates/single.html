@@ -15,7 +15,7 @@
                   <input type="text" class="form-control" placeholder="&#xf3ee; Search by category"name="image_category">
                   <br>
                  </div>
-                 <small>Trending searches: fashion, travel</small>
+                 <small>Trending searches: food, art</small>
               </form>
           </div>
       </div>
@@ -29,7 +29,7 @@
              <div class="portfolio-wrap ">
                  <div class="portfolio-wrap">
                      <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
-                         <img src="{{image.image.cdn_url}}" href="" class="image" alt="Image" >
+                         <img src="{{image.image.url}}" href="" class="image" alt="Image" >
                      </a>
                  </div>
              </div>
@@ -53,7 +53,7 @@
              <div class="portfolio-wrap ">
                  <div class="portfolio-wrap hovereffect">
                      <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%" >
-                         <img src="{{image.image.cdn_url}}" href="" class="image" alt="Image" >
+                         <img src="{{image.image.url}}" href="" class="image" alt="Image" >
                          <div class="overlay">
                              <h4>
                                  <a href="/image/{{image.image_category.category_name}}/{{image.id}}">
@@ -103,7 +103,7 @@
              <div class="portfolio-wrap ">
                  <div class="portfolio-wrap">
                      <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
-                         <img src="{{image.image.cdn_url}}" href="" class="image" alt="Image" >
+                         <img src="{{image.image.url}}" href="" class="image" alt="Image" >
                      </a>
                  </div>
              </div>
@@ -127,7 +127,7 @@
              <div class="portfolio-wrap ">
                  <div class="portfolio-wrap hovereffect">
                      <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%" >
-                         <img src="{{image.image.cdn_url}}" href="" class="image" alt="Image" >
+                         <img src="{{image.image.url}}" href="" class="image" alt="Image" >
                          <div class="overlay">
                              <h4>
                                  <a href="/image/{{image.image_category.category_name}}/{{image.id}}">
