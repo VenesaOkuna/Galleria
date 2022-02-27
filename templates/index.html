@@ -68,7 +68,7 @@
                                  <h4>{{image.image_name}}</h4>
                              </div> {% endcomment %}
                          
-                         <h6 class="hovereffect " data-toggle="modal" data-target="#exampleModalCenter">{{image.image_name}}   <span style='color:pink;'>   details</span> </h6>
+                         <a class='portfolio-wrap hovereffect' style='color:grey; text-decoration:none; ' data-toggle="modal" data-target="#myModal{{ forloop.counter }}">{{image.image_name}}   <span style='color:pink; text-decoration:none; '>   details</span> </a>
                      </div>
                  </div>
              </div>
@@ -86,7 +86,7 @@
 
     <!-- Modal -->
     {% for image in images %}
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="myModal{{ forloop.counter }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" data-target="#{{image.id}}"  aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
