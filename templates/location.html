@@ -31,7 +31,7 @@
                  <div class="portfolio-wrap ">
                      <div class="portfolio-wrap hovereffect">
                          <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
-                             <img src="{{image.image.cdn_url}}" href="" class="image" alt="Image" >
+                             <img src="{{image.image.url}}" href="" class="image" alt="Image" >
                              <div class="overlay">
                                  <h4 style="font-family: 'Nunito', sans-serif;">{{image.image_name}}</h4>
                              </div>
@@ -65,7 +65,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-9 col-lg-9">
-                                <a href="{% url 'single' category_name=image.image_category.category_name image_id=image.id %}"><img id="img{{image.id}}" src="{{image.image.cdn_url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
+                                <a href="{% url 'single' category_name=image.image_category.category_name image_id=image.id %}"><img id="img{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
                             </div>
                             <div class="col-md-3">
                                 <h4 style="font-family: 'Nunito', sans-serif;">Location</h4>

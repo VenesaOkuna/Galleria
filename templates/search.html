@@ -81,7 +81,7 @@
                         <div class="row">
 
                             <div class="col-md-9 col-lg-9">
-                                <a href="{% url 'single' category_name=image.image_category.category_name image_id=image.id %}"><img id="img{{image.id}}" src="{{image.image.cdn_url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
+                                <a href="{% url 'single' category_name=image.image_category.category_name image_id=image.id %}"><img id="img{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
                             </div>
 
                             <div class="col-md-3">

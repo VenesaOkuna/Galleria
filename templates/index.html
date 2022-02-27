@@ -18,11 +18,11 @@
                   <br>
                  </div>
 
-                 <small>Trending searches: portraits, food, abstract</small>
+                 <small>Trending searches: art, food, people, quotes</small>
 
               </form>
             <p>Did Somebody Say Art?</p>
-            <a href="#gallery">VIEW GALLERY</a>
+            <a href="#gallery" style=" background-color: pink">VIEW GALLERY</a>
         </div>
     </div>
 </div>
@@ -61,13 +61,14 @@
         <!-- displaying images -->
          <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
                  <div class="portfolio-wrap ">
-                     <div class="portfolio-wrap hovereffect">
-                         <a class="img-overlay" data-toggle="modal" data-target="#{{image.id}}" style="width:100%">
-                             <img src="{{image.image.url}}" href="#" class="image" alt="Image" >
-                             <div class="overlay">
+                     <div class="portfolio-wrap ">
+                         
+                             <img src="{{image.image.url}}" href="#" class="image" data-toggle="modal" data-target="#{{image.id}}" alt="Image" >
+                             {% comment %} <div class="overlay">
                                  <h4>{{image.image_name}}</h4>
-                             </div>
-                         </a>
+                             </div> {% endcomment %}
+                         
+                         <h6 class="hovereffect " data-toggle="modal" data-target="#exampleModalCenter">{{image.image_name}}   <span style='color:pink;'>   details</span> </h6>
                      </div>
                  </div>
              </div>
@@ -83,11 +84,63 @@
     </div>
     {% endfor %} 
 
-
-
-    <!-- Image details modal -->
+    <!-- Modal -->
     {% for image in images %}
-        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"> Image Details </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-9 col-lg-9">
+                        <a href="/"><img id="{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4 class = "desc">Location</h4>
+                        <p>{{image.image_location.location_name}}</p>
+                        <h4 class = "desc">Category</h4>
+                        <p>{{image.image_category.category_name}}</p>
+                    </div>
+
+                    <div>
+                        <h2 class="desc">{{image.image_name}}</h2>
+                        <p class="desc">{{image.image_description}}</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="copy('img{{image.id}}')">Copy Link</button>
+                <!-- <input class="form-control" type="text" value="{{image.image_link}}" id="link">
+               <a onclick="myFunction()"><button type="button"  class="btn btn-primary">Copy Link</button></a> -->
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    
+
+
+    {% comment %} <!-- Image details modal -->
+    {% for image in images %}
+        <div class="modal fade" id="{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" data-toggle="modal" data-target="#{{image.id}}" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
 
@@ -101,7 +154,7 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-9 col-lg-9">
-                                <a href="{% url 'single' category_name=image.image_category.category_name image_id=image.id %}"><img id="img{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
+                                <a href="/"><img id="{{image.id}}" src="{{image.image.url}}" class="img-thumbnail" alt="Image" style="cursor:pointer"></a>
 
                             </div>
 
@@ -119,16 +172,18 @@
                             
                         </div>
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" onclick="copy('img{{image.id}}')">Copy Link</button>
                         <!-- <input class="form-control" type="text" value="{{image.image_link}}" id="link">
                        <a onclick="myFunction()"><button type="button"  class="btn btn-primary">Copy Link</button></a> -->
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+                    
                 </div>
             </div>
-        </div>
-    {% endfor %}
-</div>
+        </div>{% endcomment %}
+    {% endfor %} 
+</div> 
 
 {% endblock %}
