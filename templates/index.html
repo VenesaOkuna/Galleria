@@ -28,29 +28,6 @@
 </div>
 
 
-{% comment %} <div class="container">
-    <div class="col">
-        <div class="row">
-            {% for image in images %}
-            <div class="col-md-3 m-2">
-                <div class="card" >
-                    <img class="card-img-top" src="{{image.image.url}}" alt="Card image cap" style="height: 200px;">
-                    <div class="card-body">
-                      <h5 class="card-title">  
-                        <small><strong>Category:{{image.category.category_name}}</strong></small><br>
-                        <a href="{% url 'image' image.id %}" class="btn btn-success align-center">View</a>
-                        <input class="form-control m-2" type="text"
-                        value="{{image.image.url}}" id="{{image.id}}.url">
-                        <button class="btn btn-success btn-sm" onclick="copyLink('{{image.id}}.url')">Copy link</button>
-                    </div>
-                  </div>
-            </div>
-            {% empty %}
-            <h3 class="text-danger">No photos Uploaded in Here........</h3>
-            {% endfor %} {% endcomment %}
-
-
-
 
 
  <div class="container wrap">
@@ -119,7 +96,7 @@
             </div>
 
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" onclick="copy('img{{image.id}}')">Copy Link</button>
+                <button class="btn btn-secondary btn-sm" onclick="copyLink('{{image.image.url}}')">Copy link</button>
                 <!-- <input class="form-control" type="text" value="{{image.image_link}}" id="link">
                <a onclick="myFunction()"><button type="button"  class="btn btn-primary">Copy Link</button></a> -->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

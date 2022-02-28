@@ -1,3 +1,5 @@
+# G A L L E R I A   W E B - A P P
+
 An Independent project for Moringa Core Django module, Feb 28th, 2022.
 
 ## Description
@@ -14,6 +16,16 @@ Galleria is a photo gallery web application to showcase a collection of pictures
 - User can see all images per location they were taken
 - Users can also search for images based categories
 - Admin can upload images from a django dashboard
+
+
+## Designs
+Here is the Design
+![Landing](./images/landing.png)
+![Locations](./images/locations.png)
+![Gallery](./images/albumgallery.png)
+![Modal](./images/detailsmodal.png)
+![Admin](./images/admin.png)
+![Footer](./images/footer.png)
 
 ## View Live Site here
 View the complete site [here](#)
