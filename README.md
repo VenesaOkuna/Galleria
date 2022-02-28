@@ -20,7 +20,7 @@ Galleria is a photo gallery web application to showcase a collection of pictures
 
 ## Site Snipets
 Here is the Design
-![Landing](/home/venesa/Documents/school/galleria/static/images/landing.png)
+![Landing](./images/landing.png)
 ![Locations](./images/locations.png)
 ![Gallery](./images/albumgallery.png)
 ![Modal](./images/detailsmodal.png)
