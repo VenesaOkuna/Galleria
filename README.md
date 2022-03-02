@@ -26,25 +26,31 @@ Galleria is a photo gallery web application to showcase a collection of pictures
 Here is the Design
 
 <p> Landing</p>
+
 ![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/landing.png)
 
 
+<p> Locations</p>
 
 ![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/locations.png)
 
 
+<p> Gallery</p>
 
 ![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/albumgallery.png)
 
 
+<p> Image Details Modal</p>
 
 ![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/detailsmodal.png)
 
 
+<p> Footer</p>
 
 ![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/footer.png)
 
 
+<p> Admin</p>
 
 ![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/admin.png)
 
@@ -52,7 +58,7 @@ Here is the Design
 
 
 ## View Live Site here
-View the complete site [here](#)
+View the complete site [here](mygalleriaapp.herokuapp.com/)
 
 
 ## Technologies Used
@@ -64,7 +70,7 @@ View the complete site [here](#)
     - Heroku
 
 ## Specifications
-To view the user dtories or BDD check the [specs file](specs.md).
+To view the BDD check the [specs file](specs.md).
 
 ### Prerequisite
 The Galleria project requires a prerequisite understanding of the following:
@@ -107,4 +113,4 @@ No known bugs so far. If found drop me an email.
     - Venesa Okuna
 
 ### Contact Information
-venesaatieno5@gmail.com | venesaatieno5@gmail.com
+vanessaatieno5@gmail.com | venesaatieno5@gmail.com
