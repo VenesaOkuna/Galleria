@@ -14,6 +14,7 @@ import os
 import environ
 from pathlib import Path
 import django_heroku
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,6 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Initialise environment variables
 env = environ.Env()
 environ.Env.read_env()
+
 
 # read th .env file
 environ.Env.read_env(env_file=str(BASE_DIR) + '/.env') 
