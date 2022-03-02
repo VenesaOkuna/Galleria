@@ -2,6 +2,10 @@
 
 An Independent project for Moringa Core Django module, Feb 28th, 2022.
 
+## Author  
+  
+[Github](https://github.com/VenesaOkuna) 
+
 ## Description
 
 Galleria is a photo gallery web application to showcase a collection of pictures. 
@@ -20,7 +24,7 @@ Galleria is a photo gallery web application to showcase a collection of pictures
 
 ## Site Snipets
 Here is the Design
-![Landing](./images/landing.png)
+![Settings Window](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/landing.png)
 ![Locations](./images/locations.png)
 ![Gallery](./images/albumgallery.png)
 ![Modal](./images/detailsmodal.png)
