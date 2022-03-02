@@ -4,7 +4,7 @@ An Independent project for Moringa Core Django module, Feb 28th, 2022.
 
 ## Author  
   
-[Github](https://github.com/VenesaOkuna) 
+[Venesa Okuna](https://github.com/VenesaOkuna) 
 
 ## Description
 
