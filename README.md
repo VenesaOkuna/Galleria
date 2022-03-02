@@ -24,12 +24,20 @@ Galleria is a photo gallery web application to showcase a collection of pictures
 
 ## Site Snipets
 Here is the Design
-![Settings Window](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/landing.png)
-![Locations](./images/locations.png)
-![Gallery](./images/albumgallery.png)
-![Modal](./images/detailsmodal.png)
-![Admin](./images/admin.png)
-![Footer](./images/footer.png)
+<br>
+![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/landing.png)
+<br>
+![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/locations.png)
+<br>
+![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/albumgallery.png)
+<br>
+![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/detailsmodal.png)
+<br>
+![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/admin.png)
+<br>
+![Landing](https://raw.github.com/VenesaOkuna/Galleria/master/static/images/footer.png)
+
+
 
 ## View Live Site here
 View the complete site [here](#)
