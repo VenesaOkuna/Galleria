@@ -1,6 +1,7 @@
 from unicodedata import category
 from django.db import models
 from django.db.models import Model
+from cloudinary.models import CloudinaryField
 from httpx import delete
 # from pyuploadcare.dj.models import ImageField
 
@@ -33,6 +34,10 @@ class Location(models.Model):
     def __str__(self):
         return self.location_name
 
+    class Meta:   
+        verbose_name_plural="Locations"
+        verbose_name="Location"
+
 
 #category
 class Category(models.Model):
@@ -56,10 +61,15 @@ class Category(models.Model):
     def __str__(self):
         return self.category_name
 
+    class Meta:   
+        verbose_name_plural="Categories"
+        verbose_name="Category"
+
+
 #image
 class Image(models.Model):
-    image = models.ImageField(null=False,blank=False,)
-    image_name = models.CharField(max_length = 60)
+    image = CloudinaryField('image')
+    image_name = models.CharField(max_length = 100)
     image_description = models.TextField()
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
     image_category = models.ForeignKey(Category, on_delete=models.CASCADE)
@@ -101,6 +111,8 @@ class Image(models.Model):
 
     class Meta:
         ordering = ['image']    
+        verbose_name_plural="Images"
+        verbose_name="Image"
 
 
 
